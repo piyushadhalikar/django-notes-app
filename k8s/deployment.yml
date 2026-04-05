@@ -25,3 +25,7 @@ spec:
 
 kubectl apply -f deployment.yml 
 deployment.apps/notes-app-deployment created
+
+kubectl get pods -n notes-app
+NAME                                    READY   STATUS    RESTARTS   AGE
+notes-app-deployment-7cfb76d587-28k4m   1/1     Running   0          27s
