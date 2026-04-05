@@ -1,0 +1,8 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: notes-app
+
+#Output:
+kubectl apply -f namespace.yml 
+namespace/notes-app created
