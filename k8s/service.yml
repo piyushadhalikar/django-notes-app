@@ -1,0 +1,18 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: notes-app-service
+  namespace: notes-app
+spec:
+  selector:
+    app: notes-app
+  ports:
+    - protocol: TCP
+      port: 8000        #service port(internal)
+      targetPort: 8000  #container port
+      nodePort: 30008   #external port
+  type: NodePort
+
+#Output:
+kubectl apply -f service.yml 
+service/notes-app-service created
